@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mtx"
+            type="Integer[][]" />
+
+        <variable
+            name="color"
+            type="Integer[]" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[0][0]!=0)?color[(int)(Math.log(mtx[0][0])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[0][0]!=0)?String.valueOf(mtx[0][0]):""}' />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[0][1]!=0)?color[(int)(Math.log(mtx[0][1])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[0][1]!=0)?String.valueOf(mtx[0][1]):""}' />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[0][2]!=0)?color[(int)(Math.log(mtx[0][2])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[0][2]!=0)?String.valueOf(mtx[0][2]):""}' />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[0][3]!=0)?color[(int)(Math.log(mtx[0][3])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[0][3]!=0)?String.valueOf(mtx[0][3]):""}' />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[1][0]!=0)?color[(int)(Math.log(mtx[1][0])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[1][0]!=0)?String.valueOf(mtx[1][0]):""}' />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[1][1]!=0)?color[(int)(Math.log(mtx[1][1])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[1][1]!=0)?String.valueOf(mtx[1][1]):""}' />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[1][2]!=0)?color[(int)(Math.log(mtx[1][2])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[1][2]!=0)?String.valueOf(mtx[1][2]):""}' />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[1][3]!=0)?color[(int)(Math.log(mtx[1][3])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[1][3]!=0)?String.valueOf(mtx[1][3]):""}' />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[2][0]!=0)?color[(int)(Math.log(mtx[2][0])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[2][0]!=0)?String.valueOf(mtx[2][0]):""}' />
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[2][1]!=0)?color[(int)(Math.log(mtx[2][1])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[2][1]!=0)?String.valueOf(mtx[2][1]):""}' />
+
+                <Button
+                    android:id="@+id/button11"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[2][2]!=0)?color[(int)(Math.log(mtx[2][2])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[2][2]!=0)?String.valueOf(mtx[2][2]):""}' />
+
+                <Button
+                    android:id="@+id/button12"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[2][3]!=0)?color[(int)(Math.log(mtx[2][3])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[2][3]!=0)?String.valueOf(mtx[2][3]):""}' />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button13"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[3][0]!=0)?color[(int)(Math.log(mtx[3][0])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[3][0]!=0)?String.valueOf(mtx[3][0]):""}' />
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[3][1]!=0)?color[(int)(Math.log(mtx[3][1])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[3][1]!=0)?String.valueOf(mtx[3][1]):""}' />
+
+                <Button
+                    android:id="@+id/button15"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[3][2]!=0)?color[(int)(Math.log(mtx[3][2])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[3][2]!=0)?String.valueOf(mtx[3][2]):""}' />
+
+                <Button
+                    android:id="@+id/button16"
+                    android:layout_width="@dimen/box_size"
+                    android:layout_height="@dimen/box_size"
+                    android:background='@{(mtx!=null &amp;&amp; mtx[3][3]!=0)?color[(int)(Math.log(mtx[3][3])/Math.log(2))]:color[0]}'
+                    android:clickable="false"
+                    android:text='@{(mtx!=null &amp;&amp; mtx[3][3]!=0)?String.valueOf(mtx[3][3]):""}' />
+            </TableRow>
+        </TableLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="restart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
